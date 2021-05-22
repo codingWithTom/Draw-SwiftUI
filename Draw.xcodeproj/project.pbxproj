@@ -7,19 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4000B640265979AE0029ECB7 /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4000B63F265979AE0029ECB7 /* Triangle.swift */; };
+		4000B64226597AC40029ECB7 /* ScalableModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4000B64126597AC40029ECB7 /* ScalableModifier.swift */; };
+		4000B644265980070029ECB7 /* DraggableAndScalable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4000B643265980060029ECB7 /* DraggableAndScalable.swift */; };
+		4000B649265986B80029ECB7 /* TwoFingerGestureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4000B648265986B80029ECB7 /* TwoFingerGestureView.swift */; };
 		403043862659743A004DF0A8 /* DrawApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403043852659743A004DF0A8 /* DrawApp.swift */; };
-		403043882659743A004DF0A8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403043872659743A004DF0A8 /* ContentView.swift */; };
 		4030438A2659743B004DF0A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 403043892659743B004DF0A8 /* Assets.xcassets */; };
 		4030438D2659743B004DF0A8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4030438C2659743B004DF0A8 /* Preview Assets.xcassets */; };
+		4030439826597475004DF0A8 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4030439726597475004DF0A8 /* CanvasView.swift */; };
+		4030439B26597579004DF0A8 /* DraggableModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4030439A26597579004DF0A8 /* DraggableModifier.swift */; };
+		4030439D26597678004DF0A8 /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4030439C26597678004DF0A8 /* Shape.swift */; };
+		4071D1752659CA5500154E3C /* OffsetOpacityModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4071D1742659CA5500154E3C /* OffsetOpacityModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4000B63F265979AE0029ECB7 /* Triangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
+		4000B64126597AC40029ECB7 /* ScalableModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScalableModifier.swift; sourceTree = "<group>"; };
+		4000B643265980060029ECB7 /* DraggableAndScalable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraggableAndScalable.swift; sourceTree = "<group>"; };
+		4000B648265986B80029ECB7 /* TwoFingerGestureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoFingerGestureView.swift; sourceTree = "<group>"; };
 		403043822659743A004DF0A8 /* Draw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Draw.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		403043852659743A004DF0A8 /* DrawApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawApp.swift; sourceTree = "<group>"; };
-		403043872659743A004DF0A8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		403043892659743B004DF0A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4030438C2659743B004DF0A8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4030438E2659743B004DF0A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4030439726597475004DF0A8 /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
+		4030439A26597579004DF0A8 /* DraggableModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraggableModifier.swift; sourceTree = "<group>"; };
+		4030439C26597678004DF0A8 /* Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
+		4071D1742659CA5500154E3C /* OffsetOpacityModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffsetOpacityModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +47,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4000B647265986AC0029ECB7 /* Gestures */ = {
+			isa = PBXGroup;
+			children = (
+				4000B648265986B80029ECB7 /* TwoFingerGestureView.swift */,
+			);
+			path = Gestures;
+			sourceTree = "<group>";
+		};
 		403043792659743A004DF0A8 = {
 			isa = PBXGroup;
 			children = (
@@ -52,8 +74,8 @@
 		403043842659743A004DF0A8 /* Draw */ = {
 			isa = PBXGroup;
 			children = (
+				4030439426597461004DF0A8 /* Scenes */,
 				403043852659743A004DF0A8 /* DrawApp.swift */,
-				403043872659743A004DF0A8 /* ContentView.swift */,
 				403043892659743B004DF0A8 /* Assets.xcassets */,
 				4030438E2659743B004DF0A8 /* Info.plist */,
 				4030438B2659743B004DF0A8 /* Preview Content */,
@@ -67,6 +89,37 @@
 				4030438C2659743B004DF0A8 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4030439426597461004DF0A8 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				4000B647265986AC0029ECB7 /* Gestures */,
+				4030439926597570004DF0A8 /* Modifiers */,
+				4030439526597466004DF0A8 /* Canvas */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		4030439526597466004DF0A8 /* Canvas */ = {
+			isa = PBXGroup;
+			children = (
+				4030439726597475004DF0A8 /* CanvasView.swift */,
+				4030439C26597678004DF0A8 /* Shape.swift */,
+				4000B63F265979AE0029ECB7 /* Triangle.swift */,
+			);
+			path = Canvas;
+			sourceTree = "<group>";
+		};
+		4030439926597570004DF0A8 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				4030439A26597579004DF0A8 /* DraggableModifier.swift */,
+				4000B64126597AC40029ECB7 /* ScalableModifier.swift */,
+				4000B643265980060029ECB7 /* DraggableAndScalable.swift */,
+				4071D1742659CA5500154E3C /* OffsetOpacityModifier.swift */,
+			);
+			path = Modifiers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +191,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				403043882659743A004DF0A8 /* ContentView.swift in Sources */,
+				4030439B26597579004DF0A8 /* DraggableModifier.swift in Sources */,
 				403043862659743A004DF0A8 /* DrawApp.swift in Sources */,
+				4000B640265979AE0029ECB7 /* Triangle.swift in Sources */,
+				4030439826597475004DF0A8 /* CanvasView.swift in Sources */,
+				4000B649265986B80029ECB7 /* TwoFingerGestureView.swift in Sources */,
+				4030439D26597678004DF0A8 /* Shape.swift in Sources */,
+				4000B644265980070029ECB7 /* DraggableAndScalable.swift in Sources */,
+				4071D1752659CA5500154E3C /* OffsetOpacityModifier.swift in Sources */,
+				4000B64226597AC40029ECB7 /* ScalableModifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
