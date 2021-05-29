@@ -7,31 +7,34 @@
 
 import SwiftUI
 
-final class Shapes {
-  static func getRandomShape() -> AnyView {
-    AnyView(shape())
-  }
+struct ShapeWrapper: Identifiable {
+  let id = UUID()
+  var color: Color
+  let number: Int
   
   @ViewBuilder
-  static func shape() -> some View {
-    let random = Int.random(in: 1 ... 4)
-    if random == 1 {
+  func shape() -> some View {
+    if number == 1 {
       Circle()
-        .fill(getRandomColor())
+        .fill(color)
         .frame(width: 100, height: 100)
-    } else if random == 2 {
+    } else if number == 2 {
       Rectangle()
-        .fill(getRandomColor())
+        .fill(color)
         .frame(width: 100, height: 100)
-    } else if random == 3 {
+    } else if number == 3 {
       Rectangle()
-        .fill(getRandomColor())
+        .fill(color)
         .frame(width: 150, height: 100)
-    } else if random == 4 {
+    } else if number == 4 {
       Triangle()
-        .fill(getRandomColor())
+        .fill(color)
         .frame(width: 150, height: 100)
     }
+  }
+  
+  static func getRandomShape() -> ShapeWrapper {
+    ShapeWrapper(color: getRandomColor(), number: Int.random(in: 1 ... 4))
   }
   
   static func getRandomColor() -> Color {

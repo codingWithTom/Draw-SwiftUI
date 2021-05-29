@@ -11,6 +11,7 @@
 		4000B64226597AC40029ECB7 /* ScalableModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4000B64126597AC40029ECB7 /* ScalableModifier.swift */; };
 		4000B644265980070029ECB7 /* DraggableAndScalable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4000B643265980060029ECB7 /* DraggableAndScalable.swift */; };
 		4000B649265986B80029ECB7 /* TwoFingerGestureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4000B648265986B80029ECB7 /* TwoFingerGestureView.swift */; };
+		402FF80D265F275E00303C14 /* CanvasViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402FF80C265F275E00303C14 /* CanvasViewModel.swift */; };
 		403043862659743A004DF0A8 /* DrawApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403043852659743A004DF0A8 /* DrawApp.swift */; };
 		4030438A2659743B004DF0A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 403043892659743B004DF0A8 /* Assets.xcassets */; };
 		4030438D2659743B004DF0A8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4030438C2659743B004DF0A8 /* Preview Assets.xcassets */; };
@@ -25,6 +26,7 @@
 		4000B64126597AC40029ECB7 /* ScalableModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScalableModifier.swift; sourceTree = "<group>"; };
 		4000B643265980060029ECB7 /* DraggableAndScalable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraggableAndScalable.swift; sourceTree = "<group>"; };
 		4000B648265986B80029ECB7 /* TwoFingerGestureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoFingerGestureView.swift; sourceTree = "<group>"; };
+		402FF80C265F275E00303C14 /* CanvasViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasViewModel.swift; sourceTree = "<group>"; };
 		403043822659743A004DF0A8 /* Draw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Draw.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		403043852659743A004DF0A8 /* DrawApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawApp.swift; sourceTree = "<group>"; };
 		403043892659743B004DF0A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				4030439726597475004DF0A8 /* CanvasView.swift */,
+				402FF80C265F275E00303C14 /* CanvasViewModel.swift */,
 				4030439C26597678004DF0A8 /* Shape.swift */,
 				4000B63F265979AE0029ECB7 /* Triangle.swift */,
 			);
@@ -191,6 +194,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				402FF80D265F275E00303C14 /* CanvasViewModel.swift in Sources */,
 				4030439B26597579004DF0A8 /* DraggableModifier.swift in Sources */,
 				403043862659743A004DF0A8 /* DrawApp.swift in Sources */,
 				4000B640265979AE0029ECB7 /* Triangle.swift in Sources */,
