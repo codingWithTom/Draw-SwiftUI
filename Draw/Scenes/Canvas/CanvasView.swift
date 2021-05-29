@@ -9,7 +9,8 @@ import SwiftUI
 
 struct CanvasView: View {
   
-  @State private var shapes: [AnyView] = []
+  @ObservedObject private var viewModel = CanvasViewModel()
+  @State private var isPresentingActionSheet = false
   
   var body: some View {
     ZStack {
@@ -17,22 +18,50 @@ struct CanvasView: View {
         .fill(Color.clear)
       TwoFingerGestureView(numberOfTaps: 2) {
         withAnimation {
-          shapes = []
+          viewModel.removeAllShapes()
         }
       }
-      ForEach(shapes.indices, id: \.self) {
-        shapes[$0]
+      ForEach(viewModel.shapes, id: \.id) { shape in
+        AnyView(shape.shape())
+          .onLongPressGesture {
+            viewModel.selectedID = shape.id
+            isPresentingActionSheet = true
+          }
           .draggableAndScaleable()
           .transition(.modifier(
                         active: OffsetOpacityModifier(offset: getRandomOffset(), opacity: 0.0),
                         identity: OffsetOpacityModifier(offset: .zero, opacity: 1.0))
           )
       }
+      if viewModel.isPresentingColorPicker {
+        VStack {
+          HStack {
+            Button(action: { viewModel.dismissColorPicker() }, label: {
+              Image(systemName: "multiply")
+                .padding()
+                .background(Color.white)
+                .clipShape(Circle())
+                .shadow(color: .black, radius: 3, x: 0.0, y: 3)
+            })
+            Spacer()
+          }
+          ColorPicker("Choose Shape Color", selection: $viewModel.selectedColor)
+          Spacer()
+        }
+        .padding()
+      }
     }
     .contentShape(Rectangle())
     .onTapGesture(count: 2) {
-      shapes.append(Shapes.getRandomShape())
+      viewModel.addShape()
     }
+    .actionSheet(isPresented: $isPresentingActionSheet, content: {
+      ActionSheet(title: Text("Edit Shape"), message: nil, buttons: [
+        .default(Text("Change Color"), action: { viewModel.isPresentingColorPicker = true }),
+        .destructive(Text("Remove"), action: { withAnimation { viewModel.removeShape() } }),
+        .cancel()
+      ])
+    })
   }
   
   func getRandomOffset() -> CGPoint {
